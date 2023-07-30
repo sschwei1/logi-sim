@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <memory>
 
-namespace Gate
+namespace gate
 {
     class BaseGate
     {

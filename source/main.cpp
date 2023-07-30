@@ -10,11 +10,11 @@
 
 int main()
 {
-    std::unique_ptr<Gate::BaseGate> input1(new Gate::Input(true));
-    std::unique_ptr<Gate::BaseGate> input2(new Gate::Input(true));
-    std::unique_ptr<Gate::BaseGate> input3(new Gate::Input(true));
+    std::unique_ptr<gate::BaseGate> input1(new gate::Input(true));
+    std::unique_ptr<gate::BaseGate> input2(new gate::Input(true));
+    std::unique_ptr<gate::BaseGate> input3(new gate::Input(true));
 
-    std::unique_ptr<Gate::BaseGate> testGate(new Gate::AND(3));
+    std::unique_ptr<gate::BaseGate> testGate(new gate::AND(3));
 
     std::cout << "add input1 / value = " << input1->getOutput() << " (added: " << testGate->addInput(input1.get()) << ")" << std::endl;
     std::cout << "add input2 / value = " << input2->getOutput() << " (added: " << testGate->addInput(input2.get()) << ")" << std::endl;

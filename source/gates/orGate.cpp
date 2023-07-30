@@ -1,8 +1,8 @@
 #include "./orGate.hpp"
 
-Gate::OR::OR(int numInputs) : BaseGate(numInputs){ }
+gate::OR::OR(int numInputs) : BaseGate(numInputs){ }
 
-bool Gate::OR::getOutput()
+bool gate::OR::getOutput()
 {
     // no need to handle empty inputs as false, because adding
     // false values to an OR-Gate will not change its outcome

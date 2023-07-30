@@ -1,11 +1,11 @@
 #include "./gateInput.hpp"
 
-Gate::Input::Input(bool value)
+gate::Input::Input(bool value)
 {
     this->value = value;
 }
 
-bool Gate::Input::getOutput()
+bool gate::Input::getOutput()
 {
     return value;
 }

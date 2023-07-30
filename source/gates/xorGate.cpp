@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-Gate::XOR::XOR(int numInputs) : BaseGate(numInputs){ }
+gate::XOR::XOR(int numInputs) : BaseGate(numInputs){ }
 
-bool Gate::XOR::getOutput()
+bool gate::XOR::getOutput()
 {
     // no need to handle empty inputs as false, because adding
     // false values to an XOR-Gate will not change its outcome

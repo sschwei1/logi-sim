@@ -3,7 +3,7 @@
 
 #include "./gate.hpp"
 
-namespace Gate
+namespace gate
 {
     class XOR : public BaseGate
     {
