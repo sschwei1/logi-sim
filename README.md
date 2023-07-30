@@ -1,6 +1,6 @@
 # Logi Sim
 ## Overview
-- [Setup and Run](#setup-project)
+- [Setup and Run](#setup-and-run)
 
 ## Setup and Run
 When initally pull the project you need to run the setup first
