@@ -9,3 +9,8 @@ bool gate::Input::getOutput()
 {
     return value;
 }
+
+void gate::Input::setOutput(bool value)
+{
+    this->value = value;
+}

@@ -10,6 +10,7 @@ namespace gate
     public:
         Input(bool value);
         bool getOutput();
+        void setOutput(bool value);
 
     private:
         bool value;
