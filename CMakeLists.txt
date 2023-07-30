@@ -4,7 +4,8 @@ cmake_minimum_required(VERSION 3.25)
 
 #define constants
 set(PROJECT_NAME logi-sim)
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/source/*.cpp" "${CMAKE_SOURCE_DIR}/source/*.hpp")
+# use configue_depends to make sure that cmake reruns when a new file is added
+file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/source/*.cpp" "${CMAKE_SOURCE_DIR}/source/*.hpp")
 
 # project name
 project(${PROJECT_NAME})
