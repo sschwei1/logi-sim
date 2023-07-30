@@ -41,9 +41,12 @@ int main()
     std::cout
         << "A B C | s c" << std::endl
         << "------+----" << std::endl;
-    for(int i = 0; i <= numInput->getMaxNumber(); i++) {
+        
+    for(int i = 0; i <= numInput->getMaxNumber(); i++)
+    {
         numInput->setInputNumber(i);
-        for(int j = numInput->getBitCount() - 1; j >= 0; j--) {
+        for(int j = numInput->getBitCount() - 1; j >= 0; j--)
+        {
             std::cout << numInput->getNthBit(j) << " ";
         }
 
