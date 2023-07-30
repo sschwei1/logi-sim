@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.25)
 
 #define constants
 set(PROJECT_NAME logi-sim)
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/source/*.cpp" "${CMAKE_SOURCE_DIR}/source/*.h")
+file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/source/*.cpp" "${CMAKE_SOURCE_DIR}/source/*.hpp")
 
 # project name
 project(${PROJECT_NAME})
