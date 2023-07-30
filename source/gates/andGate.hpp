@@ -3,11 +3,13 @@
 
 #include "./gate.hpp"
 
-class AndGate : public Gate
-{
-public:
-    AndGate(int numInputs = 2);
-    bool getOutput();
+namespace Gate {
+    class AND : public BaseGate
+    {
+    public:
+        AND(int numInputs = 2);
+        bool getOutput();
+    };
 };
 
 #endif

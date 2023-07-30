@@ -1,9 +1,9 @@
 #include "./notGate.hpp"
 
 // set inputNum to 1, because a NOT-Gate only has one input
-NotGate::NotGate() : Gate(1){ }
+Gate::NOT::NOT() : BaseGate(1){ }
 
-bool NotGate::getOutput()
+bool Gate::NOT::getOutput()
 {
     // incase no input is set, always return false
     if(inputs.size() < 1)

@@ -1,8 +1,8 @@
 #include "./andGate.hpp"
 
-AndGate::AndGate(int numInputs) : Gate(numInputs){ }
+Gate::AND::AND(int numInputs) : BaseGate(numInputs){ }
 
-bool AndGate::getOutput()
+bool Gate::AND::getOutput()
 {
     // add handling in case not all inputs are set, empty inputs
     // are handled as false (so return false for AND-Gate)
@@ -14,7 +14,7 @@ bool AndGate::getOutput()
     return std::all_of(
         inputs.begin(),
         inputs.end(),
-        [](Gate* input) {
+        [](BaseGate* input) {
             return input->getOutput();
         }
     );

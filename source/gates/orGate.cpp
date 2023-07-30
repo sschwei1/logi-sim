@@ -1,8 +1,8 @@
 #include "./orGate.hpp"
 
-OrGate::OrGate(int numInputs) : Gate(numInputs){ }
+Gate::OR::OR(int numInputs) : BaseGate(numInputs){ }
 
-bool OrGate::getOutput()
+bool Gate::OR::getOutput()
 {
     // no need to handle empty inputs as false, because adding
     // false values to an OR-Gate will not change its outcome
@@ -10,7 +10,7 @@ bool OrGate::getOutput()
     return std::any_of(
         inputs.begin(),
         inputs.end(),
-        [](Gate* input) {
+        [](BaseGate* input) {
             return input->getOutput();
         }
     );

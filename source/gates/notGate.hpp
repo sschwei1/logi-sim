@@ -3,11 +3,14 @@
 
 #include "./gate.hpp"
 
-class NotGate : public Gate
+namespace Gate
 {
-public:
-    NotGate();
-    bool getOutput();
-};
+    class NOT : public BaseGate
+    {
+    public:
+        NOT();
+        bool getOutput();
+    };   
+}
 
 #endif

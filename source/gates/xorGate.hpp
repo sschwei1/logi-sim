@@ -3,11 +3,14 @@
 
 #include "./gate.hpp"
 
-class XorGate : public Gate
+namespace Gate
 {
-public:
-    XorGate(int numInputs = 2);
-    bool getOutput();
-};
+    class XOR : public BaseGate
+    {
+    public:
+        XOR(int numInputs = 2);
+        bool getOutput();
+    };   
+}
 
 #endif

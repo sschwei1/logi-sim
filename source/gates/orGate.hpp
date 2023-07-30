@@ -3,11 +3,14 @@
 
 #include "./gate.hpp"
 
-class OrGate : public Gate
+namespace Gate
 {
-public:
-    OrGate(int numInputs = 2);
-    bool getOutput();
-};
+    class OR : public BaseGate
+    {
+    public:
+        OR(int numInputs = 2);
+        bool getOutput();
+    };   
+}
 
 #endif

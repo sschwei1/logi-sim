@@ -3,14 +3,17 @@
 
 #include "./gate.hpp"
 
-class GateInput : public Gate
+namespace Gate
 {
-public:
-    GateInput(bool value);
-    bool getOutput();
+    class Input : public BaseGate
+    {
+    public:
+        Input(bool value);
+        bool getOutput();
 
-private:
-    bool value;
-};
+    private:
+        bool value;
+    };   
+}
 
 #endif

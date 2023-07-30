@@ -5,21 +5,24 @@
 #include <algorithm>
 #include <memory>
 
-class Gate
+namespace Gate
 {
-public:
-    Gate(int numInputs);
-    virtual ~Gate();
+    class BaseGate
+    {
+    public:
+        BaseGate(int numInputs);
+        virtual ~BaseGate();
 
-    bool addInput(Gate* input);
+        bool addInput(BaseGate* input);
 
-    virtual bool getOutput() = 0;
+        virtual bool getOutput() = 0;
 
-protected:
-    Gate();
+    protected:
+        BaseGate();
 
-    int numInputs;
-    std::vector<Gate*> inputs;
-};
+        int numInputs;
+        std::vector<BaseGate*> inputs;
+    };   
+}
 
 #endif // GATE_HPP
