@@ -22,8 +22,6 @@ else
 	createDebugDir = mkdir -p $(debugDir)
 endif
 
-mkdirCommand = $(mkdirPrefix) mkdir $(mkdirFlags)
-
 setup:
 	$(createReleaseDir)
 	$(createDebugDir)
