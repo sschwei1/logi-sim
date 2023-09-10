@@ -33,6 +33,6 @@ Here is a quick roadmap on what things are currently implemented, what is curren
 |Progress|Description|
 |:--|:--|
 |:heavy_check_mark:|Implement logic gates to simulate circuits|
-|:x:|Add UI to create circuits at runtime using SFML|
-|:x:|Add possibility to create complex logic blocks (consisting of other gates/blocks) and re-use them|
+|:wrench:|Add UI to create circuits at runtime using SFML|
+|:wrench:|Add possibility to create complex logic blocks (consisting of other gates/blocks) and re-use them|
 |:x:|Add possibility to store/load blocks using the file system|
