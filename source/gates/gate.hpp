@@ -25,4 +25,4 @@ namespace gate
     };   
 }
 
-#endif // GATE_HPP
+#endif
