@@ -1,4 +1,7 @@
 # Logi Sim
+
+Logi Sim is aiming to be a logic-gate simulator. In the first stage, it should just be able to handle simple logic curcuits defined in code. In later stages, it should be able to be a fully functional application where you can build logic circuits via an UI, store complex circuits as "blocks" and re-use them and also store/load circuits from the filesystem.
+
 ## Overview
 - [Setup and Run](#setup-and-run)
 - [Roadmap](#roadmap)
