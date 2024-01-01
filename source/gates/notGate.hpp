@@ -9,7 +9,8 @@ namespace gate
     {
     public:
         NOT();
-        bool getOutput();
+        bool getOutput(GateCache* cache = nullptr);
+        std::string getIdentifier() const;
     };   
 }
 

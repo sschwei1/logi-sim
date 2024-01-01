@@ -14,6 +14,8 @@ project(${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics audio network)
+find_package(crossguid REQUIRED)
+
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 # link external libaries
@@ -24,4 +26,5 @@ target_link_libraries(
         sfml-graphics
         sfml-audio
         sfml-network
+        crossguid
 )

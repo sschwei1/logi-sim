@@ -9,9 +9,9 @@ namespace gate
     {
     public:
         Input(bool value);
-        bool getOutput();
+        bool getOutput(GateCache* cache = nullptr);
         void setOutput(bool value);
-
+        std::string getIdentifier() const;
     private:
         bool value;
     };   

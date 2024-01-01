@@ -14,54 +14,36 @@
 
 int main()
 {
-    ui::LogiSim logiSim;
-    logiSim.run();
+    gate::tools::NumberInput numInput(20, 8923);
 
-    return 0;
+    gate::XOR xorGate(10);
+    gate::NOT notGate1;
+    gate::NOT notGate2;
+    gate::NOT notGate3;
+    gate::NOT notGate4;
+    gate::NOT notGate5;
 
-    // std::unique_ptr<gate::tools::NumberInput> numInput(
-    //     new gate::tools::NumberInput(3, 0)
-    // );
+    notGate1.addInput(numInput.getOutput(17));
+    notGate2.addInput(&notGate1);
+    notGate3.addInput(&notGate2);
+    notGate4.addInput(&notGate3);
+    notGate5.addInput(&notGate4);
 
-    // std::unique_ptr<gate::XOR> xorGate1(new gate::XOR());
-    // std::unique_ptr<gate::XOR> xorGate2(new gate::XOR());
-    // std::unique_ptr<gate::AND> andGate1(new gate::AND());
-    // std::unique_ptr<gate::AND> andGate2(new gate::AND());
-    // std::unique_ptr<gate::OR> orGate1(new gate::OR());
+    xorGate.addInput(&notGate5);
+    xorGate.addInput(&notGate5);
+    xorGate.addInput(&notGate4);
+    xorGate.addInput(&notGate4);
+    xorGate.addInput(&notGate3);
+    xorGate.addInput(&notGate3);
+    xorGate.addInput(&notGate2);
+    xorGate.addInput(&notGate2);
+    xorGate.addInput(&notGate1);
+    xorGate.addInput(&notGate1);
 
-    // xorGate1->addInput(numInput->getOutput(2));
-    // xorGate1->addInput(numInput->getOutput(1));
+    gate::GateCache cache;
 
-    // xorGate2->addInput(xorGate1.get());
-    // xorGate2->addInput(numInput->getOutput(0));
-
-    // andGate1->addInput(xorGate1.get());
-    // andGate1->addInput(numInput->getOutput(0));
-
-    // andGate2->addInput(numInput->getOutput(2));
-    // andGate2->addInput(numInput->getOutput(1));
-
-    // orGate1->addInput(andGate1.get());
-    // orGate1->addInput(andGate2.get());
-
-
-    // std::cout
-    //     << "A B C | s c" << std::endl
-    //     << "------+----" << std::endl;
-        
-    // for(int i = 0; i <= numInput->getMaxNumber(); i++)
-    // {
-    //     numInput->setInputNumber(i);
-    //     for(int j = numInput->getBitCount() - 1; j >= 0; j--)
-    //     {
-    //         std::cout << numInput->getNthBit(j) << " ";
-    //     }
-
-    //     std::cout
-    //         << "| " << xorGate2->getOutput()
-    //         << " " << orGate1->getOutput()
-    //         << std::endl;
-    // }
+    std::cout << "out: " << xorGate.getOutputCached(&cache, true) << std::endl;
+    std::cout << "out: " << xorGate.getOutputCached(&cache, true) << std::endl;
 
     return 0;
 }
